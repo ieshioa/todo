@@ -18,4 +18,5 @@ public class ResultDto<T> {
                 .resultData(data)
                 .build();
     }
+
 }

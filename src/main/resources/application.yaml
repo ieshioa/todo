@@ -4,10 +4,28 @@ spring:
     url: jdbc:log4jdbc:mariadb://localhost:3306/todo
     username: root
     password: green502
-
   servlet:
     multipart:
       max-file-size: 5MB  # 이거 안해주면 디폴트가 1메가임
+  mail:
+    host: smtp.naver.com
+    port: 587
+    username: mj17428@naver.com
+    password: 7EK7G7KUVZSW
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            trust: smtp.naver.com
+          debug: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
 
 mybatis:
   mapper-locations: mappers/**/*.xml

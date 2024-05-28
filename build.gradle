@@ -22,6 +22,11 @@ repositories {
 }
 
 dependencies {
+    // 메일 보내기 위해 추가
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version: '2.6.3'
+    // redis
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
     implementation 'org.mindrot:jbcrypt:0.4'
     implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
