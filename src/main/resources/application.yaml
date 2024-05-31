@@ -8,24 +8,29 @@ spring:
     multipart:
       max-file-size: 5MB  # 이거 안해주면 디폴트가 1메가임
   mail:
-    host: smtp.naver.com
-    port: 587
+    host: smtp.naver.com # SMTP 서버 호스트
+    port: 587 # SMTP 서버 포트
     username: mj17428@naver.com
-    password: 7EK7G7KUVZSW
+    password: F8C3BEUDRBXG
     properties:
       mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-            required: true
-          ssl:
-            trust: smtp.naver.com
-          debug: true
-  data:
-    redis:
-      host: localhost
-      port: 6379
+        host: smtp.naver.com
+        port: 587
+        username: mj17428@naver.com
+        password: F8C3BEUDRBXG
+        properties:
+          mail:
+            transport:
+              protocol: smtp
+            smtp:
+              auth: true  # SMTP 인증 사용
+              starttls:
+                enable: true  # STARTTLS 사용
+                required: true
+              ssl:
+                trust: smtp.naver.com  # SSL 인증서 신뢰
+                protocols: TLSv1.2
+              debug: true  # 디버깅 정보 출력
 
 mybatis:
   mapper-locations: mappers/**/*.xml
@@ -43,7 +48,7 @@ springdoc:
     disabled: true
 
 file:
-  dir: D:\Students\MJ\download\todo\
+  dir: D:\postime\board\
 
 ---
 
