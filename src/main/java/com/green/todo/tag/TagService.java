@@ -25,7 +25,8 @@ public class TagService {
     }
 
     public int updateTag(TagUpdateReq p) {
-        if((p.getTitle() == null || p.getTitle().isEmpty()) && p.getColor() < 0 ) {
+        if((p.getTitle() == null || p.getTitle().isEmpty())
+                && p.getColor() == null || p.getColor() < 0 ) {
             throw new RuntimeException("수정할 내용을 입력해주세요.");
         }
         TagEntity tag = mapper.getTagByTitle(p.getTitle());

@@ -22,7 +22,7 @@
             <if test="title != null and title != ''">
                 title = #{title}
             </if>
-            <if test="color > 0">
+            <if test="color != null and color != '' and color > 0">
                 , color = #{color}
             </if>
         </set>
@@ -35,7 +35,7 @@
         AND (
             SELECT calendar_id
             FROM calendar_user
-            WHERE user_id = #{loginedUserId}
+            WHERE user_id = #{signedUserId}
         )	= #{calendarId}
     </delete>
 
