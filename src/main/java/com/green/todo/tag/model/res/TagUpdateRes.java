@@ -16,6 +16,6 @@ public class TagUpdateRes {
     @Schema(example = "프로젝트", description = "태그 이름")
     private String title;
     @Schema(example = "1", description = "태그 색상")
-    private int color;
+    private Integer color;
 
 }

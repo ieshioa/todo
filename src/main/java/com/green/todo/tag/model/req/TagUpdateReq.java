@@ -15,4 +15,6 @@ public class TagUpdateReq {
     private Integer color;
     @Schema(example = "3", description = "수정할 태그의 PK")
     private Long tagId;
+    @Schema(example = "2", description = "태그가 존재하는 캘린더의 PK")
+    private Long calendarId;
 }
